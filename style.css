@@ -28,7 +28,8 @@ header {
 }
 
 body.dark-mode header {
-    background-color: #121212 !important; /* Karanlık mod için arkaplan rengi */
+    background-color: #121212 !important;
+    box-shadow: 0 2px 5px rgba(128, 128, 128, 0.1) !important; /* Karanlık mod için arkaplan rengi */
     color: #fff !important; /* Karanlık mod için metin rengi */
 }
 
