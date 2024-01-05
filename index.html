@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ömer Faruk Kuş - Street Workout</title>
+    <title>Ömer Faruk Kuş</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
     <script src="menu-highlight.js"></script>
     <style>
@@ -27,6 +27,122 @@
             animation: fadeInUp 1s ease-out;
             /* İstenilen animasyon adı, süre ve geçiş fonksiyonu ayarları */
         }
+
+        /* Genel stiller */
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            overflow-x: hidden;
+            /* Yatay scroll çubuğunu gizle */
+        }
+
+        header h1 {
+            margin: 0;
+            /* H1 etiketinin varsayılan marjını kaldır */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        /* Header içindeki .container'ı ortala */
+        header .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background-color 0.4s;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        /* Gridview ve container stilleri */
+        #grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            overflow: visible;
+            margin-top: 20px;
+            padding: 20px 100px;
+        }
+
+        .grid-item {
+            color: #fff;
+            text-shadow: 1px 1px 4px #000;
+            flex: 0 0 auto;
+            height: 380px;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            background-color: #fff;
+            transition: transform 0.3s ease-out;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        body.dark-mode .grid-item {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .grid-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .grid-item .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            /* Siyah renk, %50 şeffaflık */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 1;
+            /* Kalıcı olarak görünür kılınmıştır */
+            pointer-events: none;
+            transition: opacity 0.3s ease-out;
+        }
+
+        .grid-item:hover {
+            transform: scale(1.15);
+            z-index: 1;
+        }
+
+        .grid-item h1,
+        .grid-item p {
+            margin: 0;
+            color: #fff;
+            /* Yazı rengi beyaz yapılır */
+            font-weight: bold;
+            /* Kalın font ağırlığı */
+            font-size: 1.5em;
+            /* Yazı boyutu ayarlanır */
+        }
+
+        .grid-item p {
+            font-size: 1.2em;
+            /* Yazı boyutu ayarlanır */
+        }
     </style>
 </head>
 
@@ -35,13 +151,6 @@
         <div class="container">
             <h1>ÖMER FARUK KUŞ</h1>
             <nav>
-                <ul>
-                    <li><a href="index.html">About</a></li>
-                    <li><a href="skills.html">Skills</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-                <!-- Aydınlık ve karanlık mod için slider -->
                 <div class="theme-switch-wrapper">
                     <strong>Light</strong>
                     <label class="theme-switch" for="checkbox">
@@ -54,24 +163,49 @@
         </div>
     </header>
 
-    <section id="about" class="container animated">
-        <h2>About Me</h2>
-        <p>Hello! I'm Ömer Faruk Kuş. I am a student and Street Workout Athlete.</p>
-    </section>
-
-    <section id="skills" class="container animated">
-        <img src="images/dip.jpg" alt="World Championship Dip" style="width: 300px; height: auto; border-radius: 15px;">
-        <h2>My Skills</h2>
-        <ul>
-            <li>Calisthenics</li>
-            <li>Freestyle</li>
-            <li>Endurance Training</li>
-        </ul>
-    </section>
-
-    <section id="gallery" class="container animated">
-        <h2>Photo Gallery</h2>
-        <!-- Add your photos here -->
+    <section id="grid-container" class="animated">
+        <div class="grid-item" onclick="window.location.href='about.html'">
+            <img src="images/venice.jpg" alt="About">
+            <div class="overlay">
+                <h1>About Me</h1>
+                <p>Hello! I am a student and Street Workout Athlete</p>
+            </div>
+        </div>
+        <div class="grid-item" onclick="window.location.href='software.html'">
+            <img src="images/koznotech.png" alt="Software">
+            <div class="overlay">
+                <h1>Software</h1>
+                <p>Explore my projects</p>
+            </div>
+        </div>
+        <div class="grid-item" onclick="window.location.href='sports.html'">
+            <img src="images/dip.jpg" alt="Street Workout">
+            <div class="overlay">
+                <h1>Sports</h1>
+                <p>Discover my sports journey</p>
+            </div>
+        </div>
+        <div class="grid-item" onclick="window.location.href='travel.html'">
+            <img src="images/colessium.jpg" alt="Travel">
+            <div class="overlay">
+                <h1>Travel</h1>
+                <p>Discover my travel adventures around the world</p>
+            </div>
+        </div>
+        <div class="grid-item" onclick="window.location.href='hobbies.html'">
+            <img src="images/diver.jpg" alt="Hobbies">
+            <div class="overlay">
+                <h1>Hobbies</h1>
+                <p>Explore my hobbies and interests</p>
+            </div>
+        </div>
+        <div class="grid-item" onclick="window.location.href='contact.html'">
+            <img src="images/contact.jpg" alt="Contact">
+            <div class="overlay">
+                <h1>Contact</h1>
+                <p>Get in touch with me</p>
+            </div>
+        </div>
     </section>
 
     <footer class="animated">

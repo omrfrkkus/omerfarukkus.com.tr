@@ -2,10 +2,10 @@
 <html lang="en">
 
 <head>
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ömer Faruk Kuş - Street Workout Skills</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Ömer Faruk Kuş - About Me</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
     <script src="menu-highlight.js"></script>
     <style>
@@ -31,17 +31,19 @@
 </head>
 
 <body>
-
-    <header>
+    <header class="dark-mode">
         <div class="container">
             <h1>ÖMER FARUK KUŞ</h1>
             <nav>
                 <ul>
-                    <li><a href="index.html">About</a></li>
-                    <li><a href="skills.html">Skills</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="software.html">Software</a></li>
+                    <li><a href="sports.html">Sports</a></li>
+                    <li><a href="travel.html">Travel</a></li>
+                    <li><a href="hobbies.html">Hobbies</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
+                <!-- Aydınlık ve karanlık mod için slider -->
                 <div class="theme-switch-wrapper">
                     <strong>Light</strong>
                     <label class="theme-switch" for="checkbox">
@@ -54,14 +56,24 @@
         </div>
     </header>
 
+    <section id="about" class="container animated">
+        <h2>About Me</h2>
+        <p>Hello! I'm Ömer Faruk Kuş. I am a student and Street Workout Athlete.</p>
+    </section>
+
     <section id="skills" class="container animated">
-        <h2>Skills</h2>
-        <p>Street Workout alanında edindiğim beceriler:</p>
+        <img src="images/dip.jpg" alt="World Championship Dip" style="width: 300px; height: auto; border-radius: 15px;">
+        <h2>My Skills</h2>
         <ul>
             <li>Calisthenics</li>
             <li>Freestyle</li>
-            <li>Dayanıklılık Antrenmanları</li>
+            <li>Endurance Training</li>
         </ul>
+    </section>
+
+    <section id="gallery" class="container animated">
+        <h2>Photo Gallery</h2>
+        <!-- Add your photos here -->
     </section>
 
     <footer class="animated">
