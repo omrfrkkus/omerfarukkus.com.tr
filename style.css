@@ -1,0 +1,160 @@
+/* Genel stil ayarları */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.4s, color 0.4s;
+    background-color: #fff;
+    color: #000;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #fff;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Header stil ayarları */
+/* Header stil ayarları */
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 1.5em 0;
+    transition: background-color 0.4s; /* background-color için geçiş efekti eklendi */
+}
+
+body.dark-mode header {
+    background-color: #121212 !important; /* Karanlık mod için arkaplan rengi */
+    color: #fff !important; /* Karanlık mod için metin rengi */
+}
+
+header h1 {
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+/* Menü stil ayarları */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #5776c9;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: background-color 0.3s, color 0.3s, font-size 0.2s ease 0.2s;
+}
+body.dark-mode nav ul li a {
+    color: #6488ea !important; /* Seçili olmayan menü öğelerinin metin rengi karanlık modda beyaz olacak */
+}
+
+nav ul li.active a {
+    background-color: #000 !important; /* Seçili öğe arkaplan rengi karanlık modda siyah olacak */
+    color: #fff !important; 
+    font-size: 115%;
+}
+
+body.dark-mode nav ul li.active a {
+    background-color: #fff !important; /* Seçili öğe arkaplan rengi karanlık modda beyaz olacak */
+    color: #000 !important;
+    font-size: 115%;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+    color: #fff;
+    font-size: 115%;
+}
+
+
+/* Section stil ayarları */
+section {
+    margin: 40px 0;
+}
+
+/* Footer stil ayarları */
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Aydınlık ve karanlık mod stil ayarları */
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+
+.theme-switch {
+    display: inline-block;
+    height: 28px;
+    position: relative;
+    width: 48px;
+    margin-right: 10px;
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.slider {
+    background-color: #ccc;
+    border: 1px solid #ccc;
+    border-radius: 14px;
+    cursor: pointer;
+    height: 18px;
+    position: absolute;
+    top: 4px;
+    transition: 0.4s;
+    width: 48px;
+}
+
+.slider:before {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    content: '';
+    height: 14px;
+    left: 2px;
+    position: absolute;
+    top: 2px;
+    transition: 0.4s;
+    width: 14px;
+}
+
+input:checked + .slider {
+    background-color: #000;
+}
+
+input:checked + .slider:before {
+    transform: translateX(28px);
+}
+
+.theme-switch-wrapper strong,
+.theme-switch-wrapper label,
+.theme-switch-wrapper strong {
+    margin-right: 10px; /* İstenilen boşluk miktarını ayarlayın */
+}
