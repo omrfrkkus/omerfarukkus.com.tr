@@ -33,6 +33,7 @@ body.dark-mode header {
 header h1 {
     margin-top: 0px;
     margin-bottom: 20px;
+    cursor: pointer;
 }
 
 nav ul {

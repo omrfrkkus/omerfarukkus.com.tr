@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ömer Faruk Kuş - Hobbies</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+    <script src="menu-highlight.js"></script>
+    <style>
+        /* CSS Animasyonları */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Animasyon sınıfı */
+        .animated {
+            animation: fadeInUp 1s ease-out;
+            /* İstenilen animasyon adı, süre ve geçiş fonksiyonu ayarları */
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <h1>ÖMER FARUK KUŞ</h1>
+            <nav>
+                <ul>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="software.html">Software</a></li>
+                    <li><a href="sports.html">Sports</a></li>
+                    <li><a href="travel.html">Travel</a></li>
+                    <li><a href="hobbies.html">Hobbies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="theme-switch-wrapper">
+                    <strong>Light</strong>
+                    <label class="theme-switch" for="checkbox">
+                        <input type="checkbox" id="checkbox" />
+                        <div class="slider round"></div>
+                    </label>
+                    <strong>Dark</strong>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hobbies" class="container animated">
+        <h2>My Hobbies</h2>
+        <p>Explore my hobbies and interests.</p>
+    </section>
+
+    <footer class="animated">
+        <div class="container">
+            <p>&copy; 2024 Ömer Faruk Kuş. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="dark-mode.js"></script>
+
+    <script>
+        document.querySelector('header h1').addEventListener('click', function() {
+            window.location.href = 'index.html';
+        });
+    </script>
+
+</body>
+
+</html>
