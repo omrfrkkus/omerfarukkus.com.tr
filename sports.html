@@ -27,6 +27,50 @@
             animation: fadeInUp 1s ease-out;
             /* İstenilen animasyon adı, süre ve geçiş fonksiyonu ayarları */
         }
+
+        #sports {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .line {
+            width: 2px;
+            height: 100px;
+            background-color: #000;
+        }
+
+        .content {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+        }
+
+        /* Dark mode için çizgi rengi */
+        body.dark-mode .line {
+            background-color: #fff;
+        }
+
+        /* Dark mode için içerik rengi */
+        body.dark-mode .content {
+            color: #fff;
+        }
+
+        .content img {
+            margin-top: -120px;
+            margin-bottom: -120px;
+            margin-left: 20px;
+            margin-right: 20px;
+            max-width: 240px;
+            height: auto;
+            border-radius: 20px;
+        }
     </style>
 </head>
 
@@ -57,8 +101,55 @@
     </header>
 
     <section id="sports" class="container animated">
-        <h2>Sports Journey</h2>
-        <p>Passionate about Street Workout and calisthenics.</p>
+        <h1>Sports Journey</h1>
+        <div class="timeline">
+            <div class="event"></div>
+            <div class="line"></div>
+            <div class="content">
+                <h3>Everything started with swimming<br>2008</h3>
+                <img src="images/swimming.jpeg" alt="Swimming Image">
+            </div>
+            <div class="event"></div>
+            <div class="line"></div>
+            <div class="content">
+                <h3>First Trainning with Weights and Bodyweight Exercises at Home<br>2016</h3>
+            </div>
+            <div class="event"></div>
+            <div class="line"></div>
+            <div class="content">       
+                <h3>Continue with Just Bodyweight Exercises<br>2017</h3>  
+            </div>
+            <div class="event"></div>
+            <div class="line"></div>
+            <div class="content">
+                <img src="images/hand.jpeg" alt="Hand Image">
+                <h3>2 Surgery and 6+ Months with Left Hand Injury<br>2018</h3>
+            </div>
+            <div class="event"></div>
+            <div class="line"></div>
+            <div class="content">
+                <h3>First Meet with Street Workout Park<br>2018</h3>
+                <img src="images/park.jpg" alt="Park Image">
+            </div>
+            <div class="event"></div>
+            <div class="line"></div>
+            <div class="content">
+                <h3>Forearm and Biceps Injury<br>2021</h3>
+            </div>
+            <div class="event"></div>
+            <div class="line"></div>
+            <div class="content">
+                <h3>Start of StreetLifting Training<br>2022</h3>
+            </div>
+            <div class="event"></div>
+            <div class="line"></div>
+            <div class="content">
+                <h3>StreetLifting World Championship 2023<br>2nd at Men -125kg</h3>
+                <img src="images/dip.jpg" alt="Dip Image">
+            </div>
+            <div class="event"></div>
+            <div class="line"></div>
+        </div>
     </section>
 
     <footer class="animated">
@@ -70,7 +161,7 @@
     <script src="dark-mode.js"></script>
 
     <script>
-        document.querySelector('header h1').addEventListener('click', function() {
+        document.querySelector('header h1').addEventListener('click', function () {
             window.location.href = 'index.html';
         });
     </script>
