@@ -5,6 +5,7 @@ body {
     transition: background-color 0.4s, color 0.4s;
     background-color: #fff;
     color: #000;
+    position: relative;
 }
 
 body.dark-mode {
@@ -84,15 +85,18 @@ section {
 }
 
 footer {
-    background-color: #000;
-    color: #fff;
+    color: #333;
     text-align: center;
     padding: 1em 0;
-    position: static;
+    position: relative;
     bottom: 0;
     width: 100%;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
     font-family: 'Poppins', sans-serif;
+}
+
+body.dark-mode footer {
+    color: #fff;
 }
 
 .theme-switch-wrapper {

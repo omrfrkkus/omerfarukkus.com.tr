@@ -27,6 +27,92 @@
             animation: fadeInUp 1s ease-out;
             /* İstenilen animasyon adı, süre ve geçiş fonksiyonu ayarları */
         }
+
+        /* Stiller */
+        #contact {
+            text-align: left;
+            margin-top: 50px;
+            padding: 20px;
+        }
+
+        #contact a {
+            text-decoration: none;
+            color: #333;
+            padding: 8px;
+            transition: color 0.5s;
+            /* Renk değişimine yumuşak geçiş ekledik */
+        }
+
+        #contact a:hover {
+            color: #0066cc;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: left;
+            margin-top: 20px;
+            margin-bottom: 70px;
+        }
+
+        .social-icons a {
+            font-size: 24px;
+            color: #333;
+            display: flex;
+            align-items: center;
+            padding: 8px;
+            transition: color 0.5s;
+            /* Renk değişimine yumuşak geçiş ekledik */
+        }
+
+        .social-icons a img {
+            width: 100px;
+            height: 100px;
+            margin-right: 8px;
+            transform: scale(1);
+            transition: transform 0.5s;
+            /* Büyüklük değişimine yumuşak geçiş ekledik */
+        }
+
+        .social-icons a:hover {
+            color: #0066cc;
+        }
+
+        .social-icons a:hover img {
+            transform: scale(1.2);
+            /* Üzerine gelince %20 büyüklük ekledik */
+        }
+
+        .social-icons a span {
+            opacity: 0;
+            font-size: 22px;
+            /* Açıklama yazıları biraz daha büyük */
+            font-weight: bold;
+            /* Kalın yazı */
+            margin-left: 5px;
+            transform: translateX(-20px);
+            color: #0066cc;
+            /* Normal mod için metin rengi */
+            transition: opacity 0.5s, transform 0.5s, color 0.5s;
+            /* Opaklık, konum ve renk değişimine yumuşak geçiş ekledik */
+        }
+
+        .social-icons a:hover span {
+            opacity: 1;
+            transform: translateX(0);
+            color: #0066cc;
+            /* Normal mod için metin rengi */
+        }
+
+        /* Dark mode için logoların yanında çıkan açıklamaların animasyonları */
+        body.dark-mode .social-icons a span {
+            color: #5776c9;
+            /* Dark mode için metin rengi */
+        }
+
+        body.dark-mode .social-icons a:hover span {
+            color: #5776c9;
+            /* Dark mode için metin rengi */
+        }
     </style>
 </head>
 
@@ -58,7 +144,21 @@
 
     <section id="contact" class="container animated">
         <h2>Contact Informations</h2>
-        <p>You can send me e-mail: <a href="mailto:omerfarukkus.61@gmail.com">omerfarukkus.61@gmail.com</a>.</p>
+        <p>Feel free to contact me!</p>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/omrfrkkus" target="_blank" title="Instagram">
+                <img src="images/instagram.png" alt="Instagram">
+                <span>Instagram</span>
+            </a>
+            <a href="https://www.linkedin.com/in/omrfrkkus" target="_blank" title="LinkedIn">
+                <img src="images/linkedin.png" alt="LinkedIn">
+                <span>LinkedIn</span>
+            </a>
+            <a href="mailto:omerfarukkus.61@gmail.com" title="E-mail">
+                <img src="images/mail.png" alt="E-mail">
+                <span>E-mail</span>
+            </a>
+        </div>
     </section>
 
     <footer class="animated">
@@ -70,7 +170,7 @@
     <script src="dark-mode.js"></script>
 
     <script>
-        document.querySelector('header h1').addEventListener('click', function() {
+        document.querySelector('header h1').addEventListener('click', function () {
             window.location.href = 'index.html';
         });
     </script>
