@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
     <script src="menu-highlight.js"></script>
     <style>
-        /* CSS Animasyonları */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -22,10 +21,56 @@
             }
         }
 
-        /* Animasyon sınıfı */
         .animated {
             animation: fadeInUp 1s ease-out;
-            /* İstenilen animasyon adı, süre ve geçiş fonksiyonu ayarları */
+        }
+
+        #gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .gallery-item {
+            width: 400px;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-out;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.5);
+            z-index: 1;
+        }
+
+        .gallery-item .overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease-out;
+        }
+
+        .gallery-item:hover .overlay {
+            opacity: 1;
         }
     </style>
 </head>
@@ -56,9 +101,82 @@
         </div>
     </header>
 
-    <section id="travel" class="container animated">
-        <h2>Travel Adventures</h2>
-        <p>Explore my travel adventures around the world.</p>
+    <section id="gallery" class="container animated">
+        <h2>My Travel Gallery</h2>
+        <div id="gallery" class="gallery">
+            <div class="gallery-item">
+                <img src="images/madientower.jpg" alt="İstanbul">
+                <div class="overlay">İstanbul, Madien Tower</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/colessium.jpg" alt="Colessium">
+                <div class="overlay">Rome, Colessium</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/datca.jpg" alt="Datca">
+                <div class="overlay">Muğla, Datça</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/of.jpg" alt="Of">
+                <div class="overlay">Trabzon, Of</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/efes.jpg" alt="Efes">
+                <div class="overlay">İzmir, Efes</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/ayvaini.jpg" alt="Ayvaini">
+                <div class="overlay">Bursa, Ayvaini Cave</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/galata.jpg" alt="Galata">
+                <div class="overlay">İstanbul, Galata Tower</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/sumela.jpg" alt="Sümela">
+                <div class="overlay">Trabzon, Sümela Monastery</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/venice.jpg" alt="Venice">
+                <div class="overlay">Venice</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/saltmine.jpg" alt="Krakow">
+                <div class="overlay">Krakow, Salt Mine</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/frozenlake.jpg" alt="Frozen Lake">
+                <div class="overlay">Bolu, Frozen Lake</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/wroclaw.jpg" alt="Wroclaw">
+                <div class="overlay">Wroclaw</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/alps.jpg" alt="Alps">
+                <div class="overlay">Alps</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/rialto.jpg" alt="Rialto">
+                <div class="overlay">Venice, Rialto Bridge</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/duomo.jpg" alt="Duomo">
+                <div class="overlay">Milano, Duomo</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/phanteon.jpg" alt="Phanteon">
+                <div class="overlay">Rome, Phanteon</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/sofia.jpg" alt="Sofia">
+                <div class="overlay">Sofia, Central Station</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/yerebatansarnici.jpg" alt="Yerebatan">
+                <div class="overlay">İstanbul, Yerebatan Sarnıcı</div>
+            </div>
+        </div>
     </section>
 
     <footer class="animated">
@@ -70,7 +188,7 @@
     <script src="dark-mode.js"></script>
 
     <script>
-        document.querySelector('header h1').addEventListener('click', function() {
+        document.querySelector('header h1').addEventListener('click', function () {
             window.location.href = 'index.html';
         });
     </script>
