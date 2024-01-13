@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
     <script src="menu-highlight.js"></script>
     <style>
-        /* CSS Animasyonları */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -22,10 +21,52 @@
             }
         }
 
-        /* Animasyon sınıfı */
         .animated {
             animation: fadeInUp 1s ease-out;
-            /* İstenilen animasyon adı, süre ve geçiş fonksiyonu ayarları */
+        }
+
+        #software {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        #gallery-container {
+            display: flex;
+            overflow-x: auto;
+            margin-top: 20px;
+            padding: 30px;
+            gap: 10px;
+        }
+
+        .gallery-item {
+            flex: 0 0 auto;
+            width: 300px;
+            /* İstediğiniz genişliği ayarlayabilirsiniz */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s ease-out;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 10px;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.1);
+            cursor: default;
+        }
+
+        .google-play-badge {
+            width: 300px;
+            /* İstenilen genişliği ayarlayabilirsiniz */
+            height: auto;
+            /* Otomatik yükseklik */
+            cursor: pointer;
         }
     </style>
 </head>
@@ -57,8 +98,39 @@
     </header>
 
     <section id="software" class="container animated">
-        <h2>Software Development Journey</h2>
-        <p>Explore my software development journey content here.</p>
+        <h2>Gorilla Workout</h2>
+        <p>I completed and published the Street Workout mobile application, which I made alone, using Flutter language.
+            It has multi-language support, animations, databases for professional training, easy and simple interface
+            design. Multi-language support is available throughout the application, including exercise descriptions.
+            English and Turkish languages have been added. The remaining languages will also be added. All content in
+            the application, including language translations, character drawings, animations, movement descriptions,
+            interfaces, training programs, was created by me.<br><br>My app is now available on Google Play.</p>
+        <a
+            href='https://play.google.com/store/apps/details?id=com.koznotech.gorillaworkout&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
+            <img class="google-play-badge"
+                src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'
+                alt='Get it on Google Play' />
+        </a>
+        <div id="gallery-container">
+            <div class="gallery-item"">
+                <img src=" images/mockup/pixel0.png" alt="App 1">
+            </div>
+            <div class="gallery-item"">
+                <img src=" images/mockup/pixel1.png" alt="App 1">
+            </div>
+            <div class="gallery-item"">
+                <img src=" images/mockup/pixel2.png" alt="App 1">
+            </div>
+            <div class="gallery-item"">
+                <img src=" images/mockup/pixel3.png" alt="App 1">
+            </div>
+            <div class="gallery-item"">
+                <img src=" images/mockup/pixel4.png" alt="App 1">
+            </div>
+            <div class="gallery-item"">
+                <img src=" images/mockup/pixel5.png" alt="App 1">
+            </div>
+        </div>
     </section>
 
     <footer class="animated">
