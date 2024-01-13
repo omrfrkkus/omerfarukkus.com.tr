@@ -9,11 +9,10 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
     <script src="menu-highlight.js"></script>
     <style>
-        /* CSS Animasyonları */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
-                transform: translateY(20px);
+                transform: translateY(30px);
             }
 
             to {
@@ -22,10 +21,12 @@
             }
         }
 
-        /* Animasyon sınıfı */
+        .img {
+            margin-top: 30px;
+        }
+
         .animated {
             animation: fadeInUp 1s ease-out;
-            /* İstenilen animasyon adı, süre ve geçiş fonksiyonu ayarları */
         }
     </style>
 </head>
@@ -56,23 +57,21 @@
     </header>
 
     <section id="about" class="container animated">
-        <h2>About Me</h2>
-        <p>Hello! I'm Ömer Faruk Kuş. I am a student and Street Workout Athlete. I love to travel and explore new places. I am passionate about sports and I love to participate in sports. </p>
+        <img src="images/venice.jpg" alt="World Championship Dip"
+            style="width: 300px; height: auto; border-radius: 1000px;" class="img">
+        <p>Hello! I'm Ömer Faruk Kuş. I am a student and Street Workout Athlete. I love to travel and explore new
+            places. I am passionate about sports and I love to participate in sports. </p>
     </section>
 
     <section id="skills" class="container animated">
-        <img src="images/dip.jpg" alt="World Championship Dip" style="width: 300px; height: auto; border-radius: 15px;">
         <h2>My Skills</h2>
         <ul>
             <li>Calisthenics</li>
-            <li>Freestyle</li>
-            <li>Endurance Training</li>
+            <li>Streetlifting</li>
+            <li>Swimming</li>
+            <li>Mobile Development</li>
+            <li>Sculpting</li>
         </ul>
-    </section>
-
-    <section id="gallery" class="container animated">
-        <h2>Photo Gallery</h2>
-        <!-- Add your photos here -->
     </section>
 
     <footer class="animated">
@@ -90,4 +89,5 @@
     </script>
 
 </body>
+
 </html>
