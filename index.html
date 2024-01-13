@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
     <script src="menu-highlight.js"></script>
     <style>
-        /* CSS Animasyonları */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -22,31 +21,25 @@
             }
         }
 
-        /* Animasyon sınıfı */
         .animated {
             animation: fadeInUp 1s ease-out;
-            /* İstenilen animasyon adı, süre ve geçiş fonksiyonu ayarları */
         }
 
-        /* Genel stiller */
         body {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             overflow-x: hidden;
-            /* Yatay scroll çubuğunu gizle */
         }
 
         header h1 {
             margin: 0;
-            /* H1 etiketinin varsayılan marjını kaldır */
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100%;
         }
 
-        /* Header içindeki .container'ı ortala */
         header .container {
             display: flex;
             justify-content: center;
@@ -67,7 +60,6 @@
             margin: 0 10px;
         }
 
-        /* Gridview ve container stilleri */
         #grid-container {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -114,13 +106,11 @@
             width: 100%;
             height: 100%;
             background-color: rgba(0, 0, 0, 0.5);
-            /* Siyah renk, %50 şeffaflık */
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             opacity: 1;
-            /* Kalıcı olarak görünür kılınmıştır */
             pointer-events: none;
             transition: opacity 0.3s ease-out;
         }
@@ -134,16 +124,12 @@
         .grid-item p {
             margin: 0;
             color: #fff;
-            /* Yazı rengi beyaz yapılır */
             font-weight: bold;
-            /* Kalın font ağırlığı */
             font-size: 1.5em;
-            /* Yazı boyutu ayarlanır */
         }
 
         .grid-item p {
             font-size: 1.2em;
-            /* Yazı boyutu ayarlanır */
         }
     </style>
 </head>
@@ -170,7 +156,7 @@
             <img src="images/venice.jpg" alt="About">
             <div class="overlay">
                 <h1>About Me</h1>
-                <p>Hello! I am a student and Street Workout Athlete</p>
+                <p>Hello! I am Ömer Faruk</p>
             </div>
         </div>
         <div class="grid-item" onclick="window.location.href='software.html'">
